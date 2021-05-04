@@ -1,13 +1,16 @@
 import Layout from "../../components/Layout";
 import { useState } from 'react';
 import {signup} from '../../actions'
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Redirect } from 'react-router-dom';
+
 const SignUpPage = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const dispatch = useDispatch();
+    const auth = useSelector(state => state.auth);
     const registerUser = (e) => {
         e.preventDefault();
         const user = {
@@ -15,7 +18,9 @@ const SignUpPage = () => {
         }
         dispatch(signup(user));
 }
-
+  if (auth.authenticated) {
+        return <Redirect to={'/'}/>
+}
     return (
        <Layout>
             <div className="container-fluid d-flex justify-content-center mt-5">

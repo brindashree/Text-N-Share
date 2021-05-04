@@ -1,3 +1,8 @@
 export const authConstant = {
-    USER_LOGIN:'USER_LOGIN'
+    USER_LOGIN: 'USER_LOGIN',
+    USER_LOGOUT: 'USER_LOGOUT'
+}
+
+export const userConstants = {
+    GET_REAL_TIME_USERS:'GET_REAL_TIME_USERS'
 }
