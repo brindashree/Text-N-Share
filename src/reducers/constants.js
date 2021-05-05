@@ -4,5 +4,6 @@ export const authConstant = {
 }
 
 export const userConstants = {
-    GET_REAL_TIME_USERS:'GET_REAL_TIME_USERS'
+    GET_REAL_TIME_USERS: 'GET_REAL_TIME_USERS',
+    GET_REAL_TIME_MESSAGES:'GET_REAL_TIME_MESSAGES'
 }

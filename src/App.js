@@ -12,12 +12,12 @@ import { isLoggedInUser } from './actions';
 
 function App() {
   const dispatch = useDispatch();
- const auth = useSelector(state => state.auth);
+  const auth = useSelector(state => state.auth);
+  
   useEffect(() => {
         if (!auth.authenticated) {
             dispatch(isLoggedInUser())
         }
-    
     }, []);
   return (
     <div className="App">

@@ -1,6 +1,6 @@
 import Layout from "../../components/Layout";
-import { useState ,useEffect} from 'react';
-import { isLoggedInUser, signin } from "../../actions";
+import { useState} from 'react';
+import {  signin } from "../../actions";
 import { useDispatch,useSelector } from 'react-redux';
 import { Redirect } from "react-router";
 
@@ -40,17 +40,17 @@ const LoginPage = () => {
                 <div className="card-header text-center fw-bold">Login</div>
                 <div className="card-body">
                     <form onSubmit={userLogin}>
-                        <div class="mb-3">
-                              <label  class="form-label">Email address</label>
-                                <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} class="form-control" />
+                        <div className="mb-3">
+                              <label  className="form-label">Email address</label>
+                                <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} className="form-control" />
                               
                         </div>
-                        <div class="mb-3">
-                            <label  class="form-label">Password</label>
-                            <input type="password" name="password" value={password} onChange={(e)=>setPassword(e.target.value)} class="form-control" />
+                        <div className="mb-3">
+                            <label  className="form-label">Password</label>
+                            <input type="password" name="password" value={password} onChange={(e)=>setPassword(e.target.value)} className="form-control" />
                         </div>
                       
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-primary">Submit</button>
                     </form>
                 </div>
                 </div>
